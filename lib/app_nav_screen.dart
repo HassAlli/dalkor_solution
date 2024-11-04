@@ -1,3 +1,4 @@
+import 'package:dalkor/features/core/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -52,7 +53,7 @@ class _NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    Container(color: Colors.blueAccent),
+    const HomeScreen(),
     Container(color: Colors.cyanAccent),
     Container(color: Colors.purpleAccent),
     Container(color: Colors.lightGreenAccent),
