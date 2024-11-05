@@ -17,6 +17,8 @@ dependencies:
   iconsax: ^0.0.8
   url_launcher: ^6.3.1
   intl: ^0.19.0
+  phosphor_flutter: ^2.1.0
+  fl_chart: ^0.69.0
 
 dev_dependencies:
   flutter_test:
