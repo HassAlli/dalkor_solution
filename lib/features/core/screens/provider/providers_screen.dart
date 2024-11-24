@@ -26,10 +26,10 @@ class _ProvidersScreenState extends State<ProvidersScreen> {
       'image': 'https://i.postimg.cc/28Ptx5PS/LOGOFOLIO-09.png',
     },
     {
-      'name': 'BECO',
+      'name': 'SomPower',
       'location': 'Hargaisa, Somalia',
       'image':
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhqYqxE6dzgbgz2_GeTzSVOtXan0YNwuOM1Q&s',
+          'https://www.msggroupofcompanies.com/img/images/companies/new/sompower.png',
     },
   ];
   @override
@@ -40,7 +40,7 @@ class _ProvidersScreenState extends State<ProvidersScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: AppSizes.appBarHeight),
+          const SizedBox(height: AppSizes.appBarHeight),
           Text(
             'Select Your Provider',
             style: Theme.of(context).textTheme.headlineSmall,
@@ -56,7 +56,7 @@ class _ProvidersScreenState extends State<ProvidersScreen> {
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.all(AppSizes.sm),
+                  padding: const EdgeInsets.all(AppSizes.sm),
                   decoration: BoxDecoration(
                     color: _selectedProvider == index
                         ? AppColors.primary.withOpacity(0.1)
@@ -73,6 +73,7 @@ class _ProvidersScreenState extends State<ProvidersScreen> {
                         height: 65,
                         width: 65,
                         decoration: BoxDecoration(
+                          color: Colors.white,
                           border: Border.all(
                               color: AppColors.grey.withOpacity(0.5)),
                           borderRadius: BorderRadius.circular(AppSizes.sm),
@@ -84,7 +85,7 @@ class _ProvidersScreenState extends State<ProvidersScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(width: AppSizes.md),
+                      const SizedBox(width: AppSizes.md),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -107,13 +108,13 @@ class _ProvidersScreenState extends State<ProvidersScreen> {
                 const SizedBox(height: AppSizes.md),
             itemCount: providers.length,
           ),
-          Spacer(),
+          const Spacer(),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
                 if (_selectedProvider != -1) {
-                  Get.to(MeterScreen());
+                  Get.to(const MeterScreen());
                 }
               },
               child: const Text("Continue"),

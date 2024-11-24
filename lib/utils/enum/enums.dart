@@ -1,0 +1,1 @@
+enum ChartFilter{daily, weekly,  monthly}

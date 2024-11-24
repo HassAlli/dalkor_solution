@@ -48,7 +48,7 @@ class _OTPScreenState extends State<OTPScreen> {
               style: Theme.of(context).textTheme.bodyLarge,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(6, (index) {
@@ -59,8 +59,8 @@ class _OTPScreenState extends State<OTPScreen> {
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
                     maxLength: 1,
-                    style: TextStyle(fontSize: 24),
-                    decoration: InputDecoration(
+                    style: const TextStyle(fontSize: 24),
+                    decoration: const InputDecoration(
                       counterText: '',
                       border: OutlineInputBorder(),
                     ),
@@ -75,12 +75,12 @@ class _OTPScreenState extends State<OTPScreen> {
                 );
               }),
             ),
-            SizedBox(height: AppSizes.spaceBtwSections),
+            const SizedBox(height: AppSizes.spaceBtwSections),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: _verifyOTP,
-                child: Text('Verify'),
+                child: const Text('Verify'),
               ),
             ),
           ],

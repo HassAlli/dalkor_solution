@@ -1,4 +1,7 @@
+import 'package:dalkor/features/core/screens/history/history_screen.dart';
 import 'package:dalkor/features/core/screens/home/home.dart';
+import 'package:dalkor/features/core/screens/payment/payment.dart';
+import 'package:dalkor/features/core/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -36,7 +39,7 @@ class AppNavScreen extends StatelessWidget {
             destinations: const [
               NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
               NavigationDestination(
-                  icon: Icon(Iconsax.empty_wallet), label: 'Payments'),
+                  icon: Icon(Iconsax.electricity), label: 'Purchase'),
               NavigationDestination(
                   icon: Icon(Iconsax.calendar), label: 'History'),
               NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
@@ -54,8 +57,8 @@ class _NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.cyanAccent),
-    Container(color: Colors.purpleAccent),
-    Container(color: Colors.lightGreenAccent),
+    const PurchaseScreen(),
+    const HistoryScreen(),
+    const ProfileScreen(),
   ];
 }
